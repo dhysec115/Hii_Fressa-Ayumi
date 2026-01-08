@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hai Fressa, Kenalan Yuk 👋</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ffe4ec, #e0f7ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: bounce 1.2s ease;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 40px;
+      background: #ff6f91;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px) scale(1.05);
+      background: #ff4f7b;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 720px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transition: 0.4s;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) rotate(-1deg);
+    }
+
+    .emoji {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: #ffffffdd;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      animation: pop 0.8s ease;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    /* WhatsApp Floating Button */
+    .wa-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      animation: pulse 2s infinite;
+      z-index: 999;
+    }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0% { transform: translateY(-20px); }
+      50% { transform: translateY(10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h1>Halo! Aku Bastian 😆</h1>
+  <p>Aku manusia asli, bisa ketawa, bisa laper, dan bisa bales chat 😜</p>
+  <button class="btn" onclick="scrollTo('about')">Kenalan yuk 👇</button>
+</section>
+
+<section id="about">
+  <h2>Tentang Aku 🙋</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="emoji">☕</div>
+      <p>Suka kopi tapi sering bilang<</p>
+    </div>
+    <div class="card">
+      <div class="emoji">🌙</di
+      <p>Begadang jago,<br>bangun pagi setiap hari</p>
+    </div>
+    <div class="card">
+      <div class="emoji">📱</di>
+      <p>Scroll HP sebentar,<br>tau-tau sejam</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Masih Di Sini? 😳</h2>
+  <p>Berarti kamu mau lanjut kenalan 😆</p>
+  <button class="btn" onclick="alert('Kamu baik banget ✨')">Klik kalau kamu baik</button>
+</section>
+
+<section>
+  <div class="cta">
+    <h2>Mau Kenalan Lebih Jauh? 💬</h2>
+    <p>Tenang, aku bisa bikin kamu nyaman 😄</p>
+  </div>
+</section>
+
+<a class="wa-btn" 
+   href="https://wa.me/6289627112222?text=Hai%20aku%20lihat%20website%20kenalan%20kamu%20😄" 
+   target="_blank">
+   💬 WhatsApp
+</a>
+
+<footer>
+  Dibuat dengan niat + sedikit gemas 💖 by Bastian
+</footer>
+
+<script>
+  function scrollTo(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+  }
+</script>
+
+</body>
+</html>
